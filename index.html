@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1> Advanced To-Do List Application </h1>
+    
+        <div class="importance-section">
+            <div id="stats-section">
+                <h2>Today's Progress</h2>
+                <p>Completed: <span id="tasks-completed-today">0</span> | Active: <span id="tasks-active-total">0</span></p>
+            </div>
+            
+            <div class="old-important-points">
+                <h2>The Power of a To-Do List</h2>
+                <p><strong>To-Do Lists</strong> are essential for productivity and stress reduction.</p>
+                <ul>
+                    <li>✅ Clarity: Organizes thoughts, preventing mental overload.</li>
+                    <li>🎯 Focus: Directs attention to high-priority tasks.</li>
+                    <li>🧠 Memory: Acts as an external memory, ensuring nothing is forgotten.</li>
+                    <li>😌 Motivation: Checking off tasks provides a sense of accomplishment.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="task-management-container">
+            <h2>New Task Entry</h2>
+
+            <div class="input-settings">
+                <div class="input-group">
+                    <label for="reminder-datetime">Reminder:</label>
+                    <input type="datetime-local" id="reminder-datetime">
+                </div>
+                <div class="input-group">
+                    <label for="task-priority">Priority:</label>
+                    <select id="task-priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <input type="text" id="task-input" placeholder="What needs to be done?">
+                <button id="add-task-btn">Add Task</button>
+            </div>
+            
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="task-list">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+Mini Shop: E-commerce Product Catalog
+Frontend Development - Intermediate Project
+
+This project is a functional frontend E-commerce Product Catalog that allows users to browse, search, filter, and add items to a dynamic Shopping Cart. 
+It simulates a key part of an online shopping experience and features persistent data storage.
+
+Features:
+Product Display: Products are displayed in a clean, responsive grid layout with images, names, categories, and prices.
+Search & Filter: Users can easily filter products using multiple criteria:
+       Search Product (by name).
+       Sort By (e.g., Name A-Z).
+       Filter by Category (e.g., Apparel, Electronics, Books).
+       Max Price slider to filter products within a budget.
+Shopping Cart: Fully functional cart implementation:
+     Add products to the shopping cart with the click of a button. 
+     Displays Subtotal, Discount (for coupon codes), Shipping status, and Tax.
+     Dynamically calculates the total price with taxes.
+Data Persistence: Utilizes Local Storage to ensure the shopping cart contents and state are saved even when the user leaves or refreshes the page.
+Responsive Design: Optimized for seamless viewing and interaction across all devices.
+
+Technologies Used:
+HTML5
+CSS3
+JavaScript
+Local Storage

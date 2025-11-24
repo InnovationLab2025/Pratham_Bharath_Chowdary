@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Products</h1>
+        <div id="toast-container"></div>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar">
+            <h2>Search & Filter</h2>
+
+            <div class="filter-group">
+                <label for="search-input">Search Product:</label>
+                <input type="text" id="search-input" placeholder="e.g., Shirt">
+            </div>
+
+            <div class="filter-group">
+                <label for="sort-select">Sort By:</label>
+                <select id="sort-select">
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="price-asc">Price (Low to High)</option>
+                    <option value="price-desc">Price (High to Low)</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="category-select">Filter by Category:</label>
+                <select id="category-select">
+                    <option value="all">All Categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Apparel">Apparel</option>
+                    <option value="Books">Books</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="max-price">Max Price: INR<span id="price-value">500</span></label>
+                <input type="range" id="max-price" min="10" max="100000" value="500" step="10">
+            </div>
+        </aside>
+
+        <section id="product-list" class="product-grid">
+            </section>
+
+        <section class="shopping-cart">
+            <h2>Shopping Cart 🛒</h2>
+            <div id="cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+
+            <div class="cart-summary">
+                <p>Subtotal: INR<span id="subtotal">0.00</span></p>
+
+                <div class="coupon-group">
+                    <input type="text" id="coupon-input" placeholder="Coupon Code (e.g., SAVE10)">
+                    <button onclick="applyCoupon()">Apply</button>
+                    <p id="discount-display" class="discount-applied"></p>
+                </div>
+                
+                <p>Discount: -INR<span id="discount-amount">0.00</span></p>
+
+                <div class="shipping-group">
+                    <label for="shipping-select">Shipping:</label>
+                    <select id="shipping-select" onchange="updateCartSummary()">
+                        <option value="0">Free Shipping (INR0.00)</option>
+                        <option value="5">Standard (INR5.00)</option>
+                        <option value="15">Express (INR15.00)</option>
+                    </select>
+                </div>
+                <p>Tax (10%): INR<span id="tax-amount">0.00</span></p>
+                <p><strong>Total Price: INR<span id="final-total">0.00</span></strong></p>
+                
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
